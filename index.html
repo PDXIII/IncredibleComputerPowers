@@ -1,0 +1,139 @@
+---
+layout: default
+title: Any Title
+---
+
+<div id="bl-main" class="bl-main">
+  <section id="category01">
+    <div class="bl-box">
+      <h2>Awesome Keyboard Techniques</h2>
+    </div>
+    <div class="bl-content">
+      <h2>Awesome Keyboard Techniques</h2>
+      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <ul id="bl-work-items">
+        
+      {% for post in site.categories.category01 reversed %}
+        <li class="item" data-panel="category01{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+      {% endfor %}
+      
+      </ul>
+        </div>
+    <span class="bl-icon bl-icon-close"></span>
+  </section>
+  <section id="category02">
+    <div class="bl-box">
+      <h2>Strange I/O Interfaces</h2>
+    </div>
+    <div class="bl-content">
+      <h2>Strange I/O Interfaces</h2>
+      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <ul id="bl-work-items">
+        
+      {% for post in site.categories.category02 reversed %}
+        <li class="item" data-panel="category02{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+      {% endfor %}
+      
+      </ul>
+    </div>
+    <span class="bl-icon bl-icon-close"></span>
+  </section>
+  <section id="category03">
+    <div class="bl-box">
+      <h2>Over The Top GUI</h2>
+    </div>
+    <div class="bl-content">
+      <h2>Over The Top GUI</h2>
+
+      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <ul id="bl-work-items">
+
+      {% for post in site.categories.category03 reversed %}
+        <li class="item" data-panel="category03{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+      {% endfor %}
+      
+      </ul>
+    </div>
+    <span class="bl-icon bl-icon-close"></span>
+  </section>
+  <section id="category04">
+    <div class="bl-box">
+      <h2> Magic Computer Tricks</h2>
+    </div>
+    <div class="bl-content">
+      <h2> Magic Computer Tricks</h2>
+      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <ul id="bl-work-items">
+        
+      {% for post in site.categories.category04 reversed %}
+        <li class="item" data-panel="category04{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+      {% endfor %}
+
+      </ul>
+    </div>
+    <span class="bl-icon bl-icon-close"></span>
+  </section>
+  
+  
+  <!-- Panel items for the category01 -->
+  <div class="bl-panel-items category01" id="bl-panel-category01-items">
+      {% for post in site.categories.category01 reversed %}
+      <div data-panel="category01{{ forloop.index0 }}" class="post">
+        <div>
+          {{ post.content }}
+        </div>
+      </div/>
+      {% endfor %}
+    <nav>
+      <span class="nextItem bl-next-category01">&gt; Next Project</span>
+      <span class="closeItem bl-icon bl-icon-close"></span>
+    </nav>
+  </div>
+  
+  <!-- Panel items for the category02 -->
+  <div class="bl-panel-items category02" id="bl-panel-category02-items">
+      {% for post in site.categories.category02 reversed %}
+      <div data-panel="category02{{ forloop.index0 }}" class="post">
+        <div>
+          {{ post.content }}
+        </div>
+      </div/>
+      {% endfor %}
+    <nav>
+      <span class="nextItem bl-next-category02">&gt; Next Project</span>
+      <span class="closeItem bl-icon bl-icon-close"></span>
+    </nav>
+  </div>
+  
+  <!-- Panel items for the category03 -->
+  <div class="bl-panel-items category03" id="bl-panel-category03-items">
+      {% for post in site.categories.category03 reversed %}
+      <div data-panel="category03{{ forloop.index0 }}" class="post">
+        <div>
+          {{ post.content }}
+        </div>
+      </div/>
+      {% endfor %}
+    <nav>
+      <span class="nextItem bl-next-category03">&gt; Next Project</span>
+      <span class="closeItem bl-icon bl-icon-close"></span>
+    </nav>
+  </div>
+  
+  <!-- Panel items for the category04 -->
+  <div class="bl-panel-items category04" id="bl-panel-category04-items">
+      {% for post in site.categories.category04 reversed %}
+      <div data-panel="category04{{ forloop.index0 }}" class="post">
+        <div>
+          {{ post.content }}
+        </div>
+      </div/>
+      {% endfor %}
+    <nav>
+      <span class="nextItem bl-next-category04">&gt; Next Project</span>
+      <span class="closeItem bl-icon bl-icon-close"></span>
+    </nav>
+  </div>
+  
+  
+</div>
