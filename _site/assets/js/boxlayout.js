@@ -1,3 +1,6 @@
+//@codekit-prepend "modernizr.BoxLayout.js"
+//@codekit-prepend "jquery-1.9.1.js"
+
 /**
  * boxlayout.js v1.0.0
  * http://www.codrops.com
@@ -18,6 +21,7 @@ var Boxlayout = (function() {
 		// work panels
 		// navigating the work panels
 		$nextItem = $('.nextItem'),
+		$prevItem = $('.prevItem'),
 		// if currently navigating the work items
 		isAnimating = false,
 		// close work panel trigger
@@ -60,8 +64,8 @@ var Boxlayout = (function() {
 					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
 					$el.addClass( 'bl-expand-item' );
 				}
-
-			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
+			} ).find( 'button.closeSection' ).on( 'click', function() {
+				
 				
 				// close the expanded section and scale up the others
 				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
@@ -133,6 +137,40 @@ var Boxlayout = (function() {
 
 			$currentPanel = $nextPanel;
 			$panelIndex = $nextIndex;
+
+			return false;
+
+		} );
+
+		$prevItem.on( 'click', function( event ) {
+
+			
+			if( isAnimating ) {
+				return false;
+			}
+			isAnimating = true;
+
+			var $panels = $currentContainer.children( 'div' );
+
+			// var $currentPanel = $workPanels.eq( currentPanel );
+			var $prevIndex = $panelIndex === 0 ? $panels.length - 1 : $panelIndex - 1 ;
+			var $prevPanel = $panels.eq( $prevIndex );
+
+			$currentPanel.removeClass( 'bl-show-work' ).addClass( 'bl-hide-current-work' ).on( transEndEventName, function( event ) {
+				if( !$( event.target ).is( 'div' ) ) return false;
+				$( this ).off( transEndEventName ).removeClass( 'bl-hide-current-work' );
+				isAnimating = false;
+			} );
+
+			if( !supportTransitions ) {
+				$currentPanel.removeClass( 'bl-hide-current-work' );
+				isAnimating = false;
+			}
+			
+			$prevPanel.addClass( 'bl-show-work' );
+
+			$currentPanel = $prevPanel;
+			$panelIndex = $prevIndex;
 
 			return false;
 

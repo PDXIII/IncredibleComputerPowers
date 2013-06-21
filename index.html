@@ -4,7 +4,7 @@ title: Any Title
 ---
 
 <div id="bl-main" class="bl-main">
-  <section id="category01">
+  <section id="category01" style="background-image: url('/IncredibleComputerPowers/assets/images/akt.png')">
     <div class="bl-box">
       <h2>Awesome Keyboard Techniques</h2>
     </div>
@@ -18,10 +18,11 @@ title: Any Title
       {% endfor %}
       
       </ul>
-        </div>
-    <span class="bl-icon bl-icon-close"></span>
+      <button class="closeSection lsf-icon" title="remove" ></button>
+    </div>
   </section>
-  <section id="category02">
+  
+  <section id="category02" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
     <div class="bl-box">
       <h2>Strange I/O Interfaces</h2>
     </div>
@@ -35,10 +36,11 @@ title: Any Title
       {% endfor %}
       
       </ul>
+      <button class="closeSection lsf-icon" title="remove" ></button>
     </div>
-    <span class="bl-icon bl-icon-close"></span>
   </section>
-  <section id="category03">
+  
+  <section id="category03" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
     <div class="bl-box">
       <h2>Over The Top GUI</h2>
     </div>
@@ -52,11 +54,12 @@ title: Any Title
         <li class="item" data-panel="category03{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
       {% endfor %}
       
+      <button class="closeSection lsf-icon" title="remove" ></button>
       </ul>
     </div>
-    <span class="bl-icon bl-icon-close"></span>
   </section>
-  <section id="category04">
+  
+  <section id="category04" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
     <div class="bl-box">
       <h2> Magic Computer Tricks</h2>
     </div>
@@ -70,69 +73,57 @@ title: Any Title
       {% endfor %}
 
       </ul>
+      <button class="closeSection lsf-icon" title="remove" ></button>
     </div>
-    <span class="bl-icon bl-icon-close"></span>
   </section>
-  
   
   <!-- Panel items for the category01 -->
   <div class="bl-panel-items category01" id="bl-panel-category01-items">
       {% for post in site.categories.category01 reversed %}
       <div data-panel="category01{{ forloop.index0 }}" class="post">
-        <div>
+        <div class="postContent">
           {{ post.content }}
         </div>
       </div/>
       {% endfor %}
-    <nav>
-      <span class="nextItem bl-next-category01">&gt; Next Project</span>
-      <span class="closeItem bl-icon bl-icon-close"></span>
-    </nav>
+    {% include itemNav.html %}
   </div>
   
   <!-- Panel items for the category02 -->
   <div class="bl-panel-items category02" id="bl-panel-category02-items">
       {% for post in site.categories.category02 reversed %}
       <div data-panel="category02{{ forloop.index0 }}" class="post">
-        <div>
+        <div class="postContent">
           {{ post.content }}
         </div>
       </div/>
       {% endfor %}
-    <nav>
-      <span class="nextItem bl-next-category02">&gt; Next Project</span>
-      <span class="closeItem bl-icon bl-icon-close"></span>
-    </nav>
+    
+    {% include itemNav.html %}
   </div>
   
   <!-- Panel items for the category03 -->
   <div class="bl-panel-items category03" id="bl-panel-category03-items">
       {% for post in site.categories.category03 reversed %}
       <div data-panel="category03{{ forloop.index0 }}" class="post">
-        <div>
+        <div class="postContent">
           {{ post.content }}
         </div>
       </div/>
       {% endfor %}
-    <nav>
-      <span class="nextItem bl-next-category03">&gt; Next Project</span>
-      <span class="closeItem bl-icon bl-icon-close"></span>
-    </nav>
+    {% include itemNav.html %}
   </div>
   
   <!-- Panel items for the category04 -->
   <div class="bl-panel-items category04" id="bl-panel-category04-items">
       {% for post in site.categories.category04 reversed %}
       <div data-panel="category04{{ forloop.index0 }}" class="post">
-        <div>
+        <div class="postContent">
           {{ post.content }}
         </div>
       </div/>
       {% endfor %}
-    <nav>
-      <span class="nextItem bl-next-category04">&gt; Next Project</span>
-      <span class="closeItem bl-icon bl-icon-close"></span>
-    </nav>
+    {% include itemNav.html %}
   </div>
   
   
