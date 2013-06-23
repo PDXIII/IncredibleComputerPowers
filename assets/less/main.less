@@ -11,11 +11,11 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    filter: grayscale(100%); 
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
+    // filter: grayscale(100%); 
+    // -webkit-filter: grayscale(100%);
+    // -moz-filter: grayscale(100%);
+    // -ms-filter: grayscale(100%);
+    // -o-filter: grayscale(100%);
 }
 
 html, body, section{
@@ -31,9 +31,56 @@ body{
   margin: 0 auto;
 }
 
+header{
+  margin: 0;
+  height: 20%;
+  overflow: hidden;
+}
+
+.container, .bl-main{
+  height: 80%;
+}
+
+div.bl-panel-items > div > div {
+  width: 90%;
+  top: 0;
+  h1{
+    .column(12);
+    padding: 0.5em 0;
+  }
+  h2{
+    padding: 0.5em 0;
+    .column(8);
+  }
+  img, p , iframe, ul{
+    .column(6);
+  }
+  ul{
+    display: inline-block;
+  }
+  a{
+    color: gray;
+  }
+}
+
+.bl-content > ul li{
+  .column(3);
+  height: 180px;
+  overflow: hidden;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  h3{
+    color: black;
+    padding: 0.2em
+  }
+  a{
+    border: none;
+  }
+}
+
 section{
   .fullBackgroundImage;
-  color: white;
+  // color: white;
 
 }
 
@@ -57,6 +104,7 @@ button.closeSection{
   top: 1em;
   right: 1em;
   // display: none;
+  // color: white;
 }
 
 .post{
@@ -65,5 +113,3 @@ button.closeSection{
 
 }
 
-.postContent{
-}

@@ -1,20 +1,22 @@
 ---
 layout: default
-title: Any Title
+title: Incredible Computer Powers
 ---
 
 <div id="bl-main" class="bl-main">
-  <section id="category01" style="background-image: url('/IncredibleComputerPowers/assets/images/akt.png')">
+  <section id="category01" >
     <div class="bl-box">
       <h2>Awesome Keyboard Techniques</h2>
     </div>
     <div class="bl-content">
       <h2>Awesome Keyboard Techniques</h2>
-      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <p>In this section we are going to collect case of fantastic multi keyboard tasking, blind writing with only two key and multiple users on one keyboard.</p>
       <ul id="bl-work-items">
         
       {% for post in site.categories.category01 reversed %}
-        <li class="item" data-panel="category01{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+        <li class="item" data-panel="category01{{ forloop.index0 }}"><a href="#">
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image }}" /></a></li>
       {% endfor %}
       
       </ul>
@@ -22,17 +24,19 @@ title: Any Title
     </div>
   </section>
   
-  <section id="category02" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
+  <section id="category02" >
     <div class="bl-box">
       <h2>Strange I/O Interfaces</h2>
     </div>
     <div class="bl-content">
       <h2>Strange I/O Interfaces</h2>
-      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <p>This section is reserved for weird input and output devices in look and fuctionality.</p>
       <ul id="bl-work-items">
         
       {% for post in site.categories.category02 reversed %}
-        <li class="item" data-panel="category02{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+        <li class="item" data-panel="category02{{ forloop.index0 }}"><a href="#">
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image }}" /></a></li>
       {% endfor %}
       
       </ul>
@@ -40,18 +44,20 @@ title: Any Title
     </div>
   </section>
   
-  <section id="category03" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
+  <section id="category03" >
     <div class="bl-box">
       <h2>Over The Top GUI</h2>
     </div>
     <div class="bl-content">
       <h2>Over The Top GUI</h2>
 
-      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <p>The posts in this section take care about flickering and overwhelming Graphical User Interfaces, which not only need a lot of GPU power in most cases, they need a lot of brain power too!</p>
       <ul id="bl-work-items">
 
       {% for post in site.categories.category03 reversed %}
-        <li class="item" data-panel="category03{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+        <li class="item" data-panel="category03{{ forloop.index0 }}"><a href="#">
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image }}" /></a></li>
       {% endfor %}
       
       <button class="closeSection lsf-icon" title="remove" ></button>
@@ -59,17 +65,19 @@ title: Any Title
     </div>
   </section>
   
-  <section id="category04" style="background-image: url('http://2.bp.blogspot.com/-X9p0mzNWvL0/UB40y-mGdvI/AAAAAAAAABE/BP9gS7EN4Q4/s1600/hackers11.jpg')">
+  <section id="category04" >
     <div class="bl-box">
       <h2> Magic Computer Tricks</h2>
     </div>
     <div class="bl-content">
       <h2> Magic Computer Tricks</h2>
-      <p>Mung bean maize dandelion sea lettuce catsear bunya nuts ricebean tatsoi caulie horseradish pea.</p>
+      <p>Here we take a look on the magic things that Hollywood computers can do, but not your usual laptop (nor any other computer od software).</p>
       <ul id="bl-work-items">
         
       {% for post in site.categories.category04 reversed %}
-        <li class="item" data-panel="category04{{ forloop.index0 }}"><a href="#"><img src="{{ post.image }}" /></a></li>
+        <li class="item" data-panel="category04{{ forloop.index0 }}"><a href="#">
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image }}" /></a></li>
       {% endfor %}
 
       </ul>
